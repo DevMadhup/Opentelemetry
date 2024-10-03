@@ -40,19 +40,12 @@
   rm -rf kind
   ```
 
-3. Setup Kind cluster
+6. Setup Kind cluster
   ```bash
   kind create cluster --config=config.yml
   ```
 
-5. Check cluster information:
-  ```bash
-  kubectl cluster-info --context kind-kind
-  kubectl get nodes
-  kind get clusters
-  ```
-
-6. Install kubectl
+7. Install kubectl
   ```bash
   curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
   chmod +x ./kubectl
@@ -60,22 +53,29 @@
   kubectl version --short --client
   ``` 
 
-7. Navigate to kubernetes directory
+8. Check cluster information:
+  ```bash
+  kubectl cluster-info --context kind-kind
+  kubectl get nodes
+  kind get clusters
+  ```
+
+9. Navigate to kubernetes directory
   ```bash
   cd Opentelemetry/kubernetes
   ```
 
-8. Apply manifest
+10. Apply manifest
   ```bash
   kubectl apply -f opentelemetry-demo.yaml
   ```
 
-9. Once all the pods are up and running, check the services
+11. Once all the pods are up and running, check the services
   ```bash
   kubectl get svc
   ```
 
-10. To access the application use port-forwarding
+12. To access the application use port-forwarding
   ```bash
   kubectl port-forward svc/
   ```
