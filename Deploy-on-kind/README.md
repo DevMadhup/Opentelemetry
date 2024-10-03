@@ -70,6 +70,11 @@
   kubectl apply -f opentelemetry-demo.yaml
   ```
 
+12. Check all pods are running or not
+  ```bash
+  watch kubectl get pods
+  ```
+
 11. Once all the pods are up and running, check the services
   ```bash
   kubectl get svc
@@ -77,5 +82,5 @@
 
 12. To access the application use port-forwarding
   ```bash
-  kubectl port-forward svc/
+  kubectl port-forward svc/opentelemetry-demo-frontendproxy 8080:8080 --address=0.0.0.0
   ```
