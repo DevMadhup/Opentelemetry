@@ -27,7 +27,7 @@
 
 4. Navigate to Deploy-on-kind directory
   ```bash
-  cd Opentelementry/Deploy-on-kind/
+  cd Opentelemetry/Deploy-on-kind
   ```
 
 3. Setup Kind cluster
