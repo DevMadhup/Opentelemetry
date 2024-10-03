@@ -62,7 +62,7 @@
 
 9. Navigate to kubernetes directory
   ```bash
-  cd Opentelemetry/kubernetes
+  cd ../kubernetes/
   ```
 
 10. Apply manifest
